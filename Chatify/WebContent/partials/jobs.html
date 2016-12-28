@@ -1,0 +1,40 @@
+  <div>
+    <hr></hr>
+    <table class="table table-striped">
+    <tr>
+    <th>Job ID</th>
+    <th>Job Role</th>
+    <th>Job Description</th>
+    <th>Eligibility Criteria</th>
+    </tr>
+        <tr ng-repeat="resource in jobs | filter:search">
+             <td>{{resource.job_Id}}</td>
+             <td>{{resource.job_Role}}</td>
+            <td>{{ resource.job_Description}}</td>
+            <td>{{ resource.eligibility}}</td>
+            <td><button type="button" class="btn btn-primary btn-sm "  data-toggle="modal" data-target="#applyJob">Apply</button></td>
+        </tr>    
+    </table>
+    <div>
+  <!-- Modal -->
+  <div class="modal fade" id="applyJob" role="dialog">
+    <div class="modal-dialog">
+    
+     
+      
+           Modal content
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Application Status</h4>
+        </div>
+        <div class="modal-body">
+         <strong >You have applied successfully for this job...!!</strong>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>    
+</div>

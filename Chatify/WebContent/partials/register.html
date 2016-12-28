@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.left {
+    position: absolute;
+    left:5px;
+    width: 500px;
+    border: 1px solid #3366ff;
+    padding: 10px;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #3366ff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #3366ff;
+}
+
+div {
+    border-radius: 0px;
+    background-color: #f2f2f2;
+    padding: 0px;
+}
+</style>
+</head>
+<body>{{message}}
+<br></br>
+<div class="left">
+<h3>Sign Up here</h3>
+
+<div>
+  <form name="regForm">
+    <label for="usname">Username</label>
+    <input type="text" id="em" name="email" ng-model="email" required>
+    <span ng-show="regForm.username.$error.required"style="color:red; font-size:small;">* name required </span>
+<br>
+
+    <label for="pwd">Password</label>
+    <input type="password" id="pwd" name="password" ng-model="password" required>
+    <span ng-show="regForm.password.$error.required"style="color:red; font-size:small;">* password required </span>
+    <br></br>
+    
+    <label for="pwd">email</label>
+    <input type="text" id="usname" name="username" ng-model="username" required>
+    <span ng-show="regForm.password.$error.required"style="color:red; font-size:small;">* email required </span>
+    <br></br>
+
+    <label for="mobile">Mobile</label>
+    <input type="text" id="mobile" name="mobile" ng-model="mobile" required>
+<span ng-show="regForm.mobile.$error.required"style="color:red; font-size:small;">* number required </span>
+
+  <input type="file" file-model="myFile"/>
+  
+    <input type="submit" value="Submit" ng-click="register()" ng-disabled="regForm.$invalid">
+  </form>
+</div>
+</div>
+</body>
+</html>

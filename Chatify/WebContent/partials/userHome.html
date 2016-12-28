@@ -1,0 +1,98 @@
+<style>.online{
+float: right;
+margin-top:1%;
+height:15px;
+width:15px;
+background-color:#0EE700;
+border-radius:500px;	
+		
+}</style>
+
+
+<div class="jumbotron text-center">
+	
+<button type="button" data-toggle="modal" data-target="#friends" ng-click="findfriends()">Find Friends</button>
+<button type="button" data-toggle="modal" data-target="#friendslist" ng-click="yourfriends()">Friends</button>
+<img class="img-responsive" src="images/{{ename}}.jpg" alt="Chania" style="width: 20%;height: 30%">
+<h5 style="text-align: left;">Hello, {{ename}}</h5>
+
+	<!-- Modal -->
+	<div class="modal fade" id="friends" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Find Friends</h4>
+				</div>
+				<div class="modal-body">
+				<table class="table table-striped">
+		<thead>
+		<tr>
+		<th>Users</th>
+		</tr></thead>
+		<tbody>
+			<tr ng-repeat=" user in friends">
+			<td>	<img class="img-responsive" src="images/{{user.email}}.jpg" alt="Chania" style="width: 20%;height: 30%"></td>
+			
+				<td>{{user.email}}</td>
+		<td><button type="button" class="btn btn-primary btn-sm "
+						data-toggle="modal" data-target="#" ng-disabled="isDisabled"
+						ng-click="addFriend(user)">Add Friend</button></td>		
+			</tr>
+		</tbody>
+	</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal -->
+	<div class="modal fade" id="friendslist" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title"> Your Friends </h4>
+				</div>
+				<div class="modal-body">
+				<table class="table table-striped">
+		
+		<tbody>
+			<tr ng-repeat=" user in yourfriends">
+			<td class="online" ng-style="{'background-color':user.isOnline=='online'? '#0EE700' : 'red'}"></td>
+			
+				<td>{{user.friendName}}</td>
+				<td><img src="images/{{user.email}}.jpg" alt="me" style="width:150px;height:150px;border-radius: 50%;">
+			</td>
+			<td><button type="button" class="btn btn-primary btn-sm "
+						data-toggle="modal" data-target="#"
+						ng-click="">Chat</button> 
+						<!-- <td><a href="#chat">chat</a> -->
+			</tr>
+		</tbody>
+	</table>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+				<table class="table table-striped">
+		
+		<tbody>
+			<tr ng-repeat=" user in login">
+				<td>{{user.friendName}}</td>
+				<td><img src="images/{{user.email}}.jpg" alt="me" style="width:150px;height:150px;border-radius: 50%;">
+			</td>
+			</tr>
+			</tbody></table>
+		</div>
+	</div>
+</div>
+

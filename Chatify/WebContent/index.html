@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app="chattiez" ng-init="likes=0;register=true;login=true;chat=false;forum=false;blog=false;adminjobs=false;viewAllBlogs=false;jobs=false;adminBlogs=false;logout=false">
+
+<head>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+
+
+ 
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-cookies.js"></script>
+  <script src="js/home.js"></script>
+  <script src="libs/stomp-websocket/lib/stomp.min.js" type="text/javascript"></script>
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/lodash/dist/lodash.min.js"></script>
+ <script src="libs/sockjs/sockjs.min.js" type="text/javascript"></script>
+ 
+ <style>
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGviJfQ_hqp7-Wtp3vZr8f5s-Ogye_6Jzc-5MHYMZ-KlOzcDMT");
+    width:100%
+    } 
+ </style>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+   <div class="container">
+     <div class="navbar-header">
+        <a class="navbar-brand" href="/">Chattiezz</a>
+     </div>
+<ul class="nav navbar-nav navbar-right">
+         <li><a href="#register"ng-show="register"><i class="fa fa-home"></i> Register</a></li> 
+         <li><a href="#login" ng-show="login"><i class="fa fa-shield"></i> Login</a></li>
+         <li><a href="#blog" ng-show="blog"><i class="fa fa-shield"></i> My Blogs</a></li>
+         <li><a href="#forum" ng-show="forum"><i class="fa fa-shield"></i> My Forums</a></li>
+         <li><a href="#viewAllBlogs" ng-show=viewAllBlogs"><i class="fa fa-shield"></i> View all blogs</a></li>
+         <li><a href="#jobs" ng-show="jobs"><i class="fa fa-shield"></i> Job alert</a></li>
+         <li><a href="#logout" ng-show="logout"><i class="fa fa-shield"></i> Log out</a></li>
+         <li><a href="#adminBlogs" ng-show="adminBlogs"><i class="fa fa-shield"></i> Admin blogs</a></li>
+         <li><a href="#adminjobs" ng-show="adminjobs"><i class="fa fa-shield"></i> Admin jobs</a></li>
+          <li><a href="#chat" ng-show="chat"><i class="fa fa-shield"></i> chat</a></li>
+ </ul>
+    </div>
+ </nav>
+<div ng-view></div>
+</body>
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+<center>
+<i class="glyphicon glyphicon-cloud" style="font-size:50px;"></i>
+<i class="glyphicon glyphicon-cloud" style="font-size:100px;"></i>
+<i class="glyphicon glyphicon-cloud" style="font-size:180px;color:red;"></i>
+<i class="glyphicon glyphicon-cloud" style="font-size:250px;color:lightblue;"></i></center>
+</center>
+</html>

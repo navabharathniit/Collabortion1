@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<form>
+Email:<input type="text" name="email" ng-model="email"><br>
+Password:<input type="password" name="password" ng-model="password"><br>
+<button ng-click="login()">Login</button>
+</form>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.left {
+    position: absolute;
+    left:50px;
+    width: 500px;
+    border: 1px solid #3366ff;
+    padding: 10px;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #3366ff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #3366ff;
+}
+
+div {
+    border-radius: 0px;
+    background-color: #f2f2f2;
+    padding: 0px;
+}
+</style>
+</head>
+<body>
+<div class="left">
+<h3>Log in here</h3>
+
+<div>
+  
+    <label for="usname">Username</label>
+    <input type="text" id="usname" name="email" ng-model="email">
+
+    <label for="pwd">Password</label>
+    <input type="password" id="pwd" name="password" ng-model="password"><br></br>
+
+    
+  
+    <input type="submit" value="Submit" ng-click="login()">
+  </form>
+</div>
+</div>
+</body>
+</html>
